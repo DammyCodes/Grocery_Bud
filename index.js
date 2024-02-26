@@ -1,6 +1,6 @@
 const form = document.getElementById('form')
 let inputField = document.getElementById('input-field')
-const clearListBtn = document.getElementById('clear')
+const clearItemsBtn = document.getElementById('clear')
 const item = document.querySelector('.item')
 
 
@@ -21,3 +21,4 @@ let renderListItems = e => {
 
 form.addEventListener('submit', renderListItems)
 
+clearItemsBtn.addEventListener('click', () => document.getElementById('list').innerHTML = '' )
