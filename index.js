@@ -17,6 +17,7 @@ let renderListItems = e => {
         </div>
      
     `
+    inputField.value = ''
 }
 
 form.addEventListener('submit', renderListItems)
