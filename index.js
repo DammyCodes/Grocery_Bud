@@ -31,6 +31,6 @@ let renderListItems = e => {
 
 form.addEventListener('submit', renderListItems)
 
-clearItemsBtn.addEventListener('dblclick', () => document.getElementById('list').innerHTML = '' )
+clearItemsBtn.addEventListener('click', () => document.getElementById('list').innerHTML = '' )
 
 
