@@ -3,6 +3,9 @@ let inputField = document.getElementById('input-field')
 const clearItemsBtn = document.getElementById('clear')
 const item = document.querySelector('.item')
 
+let Delete = e => {
+    e.parentElement.parentElement.remove()
+}
 
 let renderListItems = e => {
     e.preventDefault()
@@ -12,7 +15,7 @@ let renderListItems = e => {
             <p>${inputField.value}</p>
             <span>
                 <i class="fa-solid fa-pen-to-square"></i>
-                <i class="fa-solid fa-trash"></i>
+                <i class="fa-solid fa-trash" onclick="Delete(this)"></i>
             </span>
         </div>
      
@@ -22,4 +25,6 @@ let renderListItems = e => {
 
 form.addEventListener('submit', renderListItems)
 
-clearItemsBtn.addEventListener('click', () => document.getElementById('list').innerHTML = '' )
+clearItemsBtn.addEventListener('dblclick', () => document.getElementById('list').innerHTML = '' )
+
+
